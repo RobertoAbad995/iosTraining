@@ -1,0 +1,45 @@
+## Questions:
+
+What is the difference between var and let?
+	•var allows to assign multiple times and let is a constant that need to be initialized with a value only one time.
+
+What is an optional?
+	•Is a datatype for a variable that can storage a value or a missing value (nil) and make more easy to work than pointers.
+
+
+What is optional chaining vs optional binding?
+	•The optional binding is a secure way to get the value of Ann optional with a block of code to work with the diferent cases that
+	The optional can handle. But optional chaining doesn't store the value, but it can access to property, methods or direct value that can be nil.
+What are the different ways to unwrap an optional? How do they work? Are they safe?
+	•Secure unwrap
+		with optional binding that is a if (let or var) else block to work with the unwrapped value
+	•Insecure unwrap
+		Force unwrap with the character '!' -> optionalVar!
+	•With default value. If an optional don't have a value (nil) then use a default, example of expression : print(varCreated?? "None")
+		If varCreated doesn't have a value, then print will show "None"
+
+What is a closure?
+	•Is a functionality that it isn't stored in a func structure. It might be stored inn a variable and have a simple structure
+	{(params) -> return value { block of code }}
+
+What is the difference between a class and a struct?
+	•The two are mostly the same but with some differences. The most important is that a structure can create multiple instances of the struct
+	and everyone is a different copy, but with Class we got a reference type, so if you change a value of a property class all the instances will
+	change their value.
+
+
+What is the syntax '??' do?
+	•Is a way to handle the absence of a value in an optional variable, and allows to use a default value instead
+
+What is a tuple?
+	•Is a way to store two related values with different or the same type, for example { name : age, productName: priceValue, carName:hexColor}.
+ 
+What is Any vs AnyObject?
+	•Any can represent an instance of any type at all, including function types and optional types. AnyObject can represent an instance of any class
+	 type.
+
+What is a protocol?
+	•defines a blueprint of methods or properties that can then be adopted by classes (or any other types).
+
+What is Delegation
+	•is a controller object with a defined interface that can be used to control or modify the behavior of another object.

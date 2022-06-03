@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>let input: String = "{()}"
+print("input string: " + input)
+
+func checkBalancedBrackets(string: String) -&gt; Bool {
+    
+    var result = [Character]()
+    //dictionary with the 
+    let mapBrackets : [Character: Character] = ["}":"{", ")":"(", "]":"[" ] 
+    
+    let openingBrackets = "([{"
+    
+    
+    //CHECK ALL THE CHARACTERS IN THE INPUT
+    for char in string {
+        
+        //CHECK IF THE CHAR THAT IS EVALUATING IS AN OPEN BRACKET
+        if openingBrackets.contains(char){
+            //IF IT IS AN OPEN BRACKET IT APPENDS TO RESULTS AND EXECUTION CONTINUE
+            result.append(char)
+        }
+        else {
+            
+            //IF THERE IS NOT A OPEN BRACKET IN THE RESULT STACK AND THIS IS NOT A OPEN BRACKET
+            //IT MUST BE WRONG BEACUSE THERE IS NO OPEN BRACKET FIRST
+            if result.isEmpty {
+                return false
+            }//GET THE OPEN BRACKET FROM THE DICTIONARY BY THE CURRENT CHAR, TO SEE IF IS THE CLOSE BRACKET 
+            else if let last = result.last, last == mapBrackets[char] {
+                //IF IT IS, THEN WE TAKE IT OUT FROM THE RESULT STACK
+                result.popLast()
+            }
+            else {
+                //IF THE CONDITION DONT GET THE OPEN BRACKET FOR THE CURRENT CHAR IT IS WRONG
+                return false
+            }
+        }
+    }
+    return result.isEmpty
+}
+
+print("Output: " + String(checkBalancedBrackets(string: input)))
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 1432}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
